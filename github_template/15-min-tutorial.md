@@ -95,7 +95,7 @@ In your GitHub repository, paste the output of the generator into `metadata.yml`
 ![Copy output to clipboard](img/metadata-copy-to-clipboard.png)
 
 ### Video: Update the metadata
-!?[Update the metadata](videos/5_min-github_update_metadata_with_generator.mp4)
+!?[Update the metadata](videos/metadata-placeholder.mp4)
 
 ## Configuration of the document generation
 In the top level of the repository, there is a file named `config.yml`. It includes configuration for these four things:
