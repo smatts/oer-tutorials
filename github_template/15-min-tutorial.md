@@ -106,7 +106,7 @@ In the top level of the repository, there is a file named `config.yml`. It inclu
 * `generate_reuse_note`: decide whether or not to generate a reuse note on the generated documents
 
 ### Video: Configuration
-!?[Config file explained](videos/config-placeholder.mp4)
+!?[Config file explained](videos/config.mp4)
 
 ## Insert your course/document in OERSI
 > Let's assume that...
