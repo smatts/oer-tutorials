@@ -1,25 +1,46 @@
-# Create and host a course/document with GitHub
-This tutorial guides you through the creation of a complete, publically available course/document with GitHub.
+# Create and publish OER with GitHub
+We believe that open educational resources can be created using tools the open source community has been successfully using for many years now.
+This tutorial guides you through the creation of open educational resources (OER) with GitHub. Using our GitHub template, you can easily create and publish your own OER in just a few minutes.
 
 **What's in this tutorial:**
 
+* [Quick Start](#quick-start)
+
+    * [Requirements](#requirements)
+
+  * [Create a project](#create-a-project)
+  * [Enable automatic generation](#enable-automatic-generation)
+  * [Upload your own content](#upload-content)
+  * [Update the metadata](#update-the-metadata)    
+  * [Configuration options](#configuration-options)
+  * [Insert the course in OERSI](#insert-your-coursedocument-in-oersi)
+
+> After completing this tutorial, you will have an automatically generated OER with your own content and metadata, published on GitHub for free and ready to be put into our OER search index [OERSI](https://oersi.org).
+
+## Quick Start
+> If you want to get started quickly, you can follow this quick start tutorial and create a simple OER using GitHub within just a couple of minutes.
+
+The quick start tutorial consists of the following steps, which you can click through either on the sidebar, using the arrows on the bottom or simply using the arrow keys on your keyboard.
+
 * [Requirements](#requirements)
-* [Create a repository](#create-a-repository)
-* [Edit the course files](#edit-the-course-files)
-* [Update the metadata](#update-the-metadata)
-* [Configuration of the document generation](#configuration-of-the-document-generation)
+* [Create a project](#create-a-project)
+* [Enable automatic generation](#enable-automatic-generation)
+* [Upload your own content](#upload-content)
+* [Update the metadata](#update-the-metadata)    
+* [Configuration options](#configuration-options)
 * [Insert the course in OERSI](#insert-your-coursedocument-in-oersi)
 
-> After completing this tutorial, you will have a fully automated course/document creation with your own material and complete metadata, hosted on GitHub for free and ready to be put into OERSI.
+### Requirements
 
-## Requirements
-For this tutorial, you will need a GitHub account. If you don't have one yet, you have to create one. You can do this for free. It is also recommended to know Markdown, since Markdown is used to write and format your course/document files.
+<section>
 
-If you already have a GitHub account and know basic markdown syntax, you can skip this part and directly go do [Create a repository](#create-a-repository).
+> For this tutorial, **you will need a GitHub account**. It is also recommended to **get to know Markdown**, a markup language which can create formatted text using only plain-text, since Markdown is used to write and format your content.
+>
+> If you already have a GitHub account and know basic markdown syntax, you can skip this part and directly go do [Create a project](#create-a-project).
 
 ### Create a GitHub account
 
-If you don't have an account yet, go to [GitHub's](https://github.com/) and sign up. Confirm your e-mail address and log in.
+If you don't have an account yet, go to [GitHub](https://github.com/) and sign up. Confirm your e-mail address and log in.
 
 ### Markdown
 
@@ -35,20 +56,32 @@ If you want to learn about Markdown, what it is and what you can do with it, you
 
 To see basic formatting options, check out the [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). More basic syntax can be found in the [Basic Syntax](https://www.markdownguide.org/basic-syntax/) guide.
 
-## Create a repository
+</section>
+
+### Create a project
+
+<section>
+
+> The place where you will put your OER is called a `repository`. You can think of it as a project where all your files are located.
+
 Once you are logged into GitHub, go to the [TIB Hannover markdown documents template repository](https://github.com/TIBHannover/markdown-documents-template) and click on "Use this template" -> "Create a new repository".
 
-Assign the repository to the correct owner and give it a short but meaningful name. The name will be the URL of the repository as well. You can add a description if you want. Now make sure that the visibility of the repository is set to **Public**. This has two main reasons: firstly, so people can see your course/document, and secondly to use the GitHub pages functionality which we will get to later. Lastly, confim by clicking on "Create repository from template".
+Assign the repository to the correct owner and give it a short but meaningful name. The name will be the URL of the repository as well. You can add a description if you want. Now make sure that the visibility of the repository is set to **public**. This has two main reasons: firstly, so people can see your OER, and secondly to use the GitHub pages functionality which we will get to later. Lastly, confim by clicking on "Create repository from template".
 
 Now, a new repository is initialized for you containing the contents from the template.
 
-### Video: Create a repository
+#### Video tutorial
 !?[Tutorial as video](videos/create-from-template.mp4)
 
-## Actions and Pages
+</section>
+
+### Enable automatic generation
 
 <section>
-The last thing you have to do now in order to generate all the course files is to go to the project's `Settings` -> `Pages` and in `Build and Development` set the source to `GitHub Actions`. After this, you can head to the `Actions` tab and click on the newest workflow run. If the worklow already ran, you will find that it failed. This happened because the Pages were not enabled yet. In this case, click on re-run jobs. Otherwise, wait until the jobs have finished. The pages and documents are now created. They can be accessed by the link that appeared under the `deploy` step.
+
+> The automatic generation will take your content (everything inside the `Markdown` files, so those ending with `.md`) and generate different output formats. For example, these include a **web page** and a **pdf** version of your OER and are publicly accessible. This generation is done each time you change something in your repository, so your content will always be up to date.
+
+In order to generate the different output formats for your OER, go to the project's `Settings` -> `Pages` and in `Build and Development` set the source to `GitHub Actions`. After this, you can head to the `Actions` tab and click on the newest workflow run. If the worklow already ran, you will find that it failed. This happened because the Pages were not enabled yet. In this case, click on re-run jobs. Otherwise, wait until the jobs have finished. The pages and documents are now created. They can be accessed by the link that appeared under the `deploy` step.
 
 Congratulations, you now have a complete course/document that you can make your own!
 
@@ -63,64 +96,132 @@ Congratulations, you now have a complete course/document that you can make your 
 >
 >More information on GitHub Pages can be found here: [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
-</section>
-
-### Video: Actions and Pages
+### Video tutorial
 !?[Actions and Pages](videos/pages.mp4)
 
-## Edit the course files
-In the repository, you can find four `chapterXX.md` files. You can edit them or delete them and create new files. If you want to use different names for your chapters, list them with in correct order in `config.yml`. By default, the chapters are sorted alphabetically.
+</section>
 
-Text editors
-============
-The use of text editors that support Markdown live previews can make it a lot easier to create well-formatted Markdown files. You can install an editor locally, like Atom or Visual Studio Code.
+### Upload content
 
-![VSCodium](img/vscode.png "Visual Studio Code - Text CC-BY-SA Matt Cone Markdown Guide")
+<section>
 
-There are also many websites that provide a live preview of your document directly in your browser.
-However, there are big advantages to install an editor on your computer instead of using browser previews, though:
+> Currently, there is still dummy data inside your repository. The next step is to replace this dummy data with your actual OER.
 
-* you can view all your local files and easily go through your directory instead of having to copy-paste all your files, and
-* you can work on your files even when you are not connected to the internet.
+### How and where to upload your own content
 
-On top of that, in your local editor you can install plugins to further help you out. For example, if you want to use [LiaScript](https://liascript.github.io) for your course, you can install a `LiaScript-Preview` plugin and can view your course locally in your browser before having to upload it anywhere.
+In the repository, you can find four `chapterXX.md` files. These are our dummy content files.
+You can either edit or delete them. You can of course create new files, too.
+If you create new files, make sure that they end with the correct file format ending `.md`, so `filename.md`.
 
-## Update the metadata
-Perhaps the easiest way to generate your own metadata for your repository is to use the [OERSI metadata generator](https://oersi.gitlab.io/metadata-form/metadata-generator.html) and fill out at least all required fields, but in the best case fill out everything.
+### Ensuring the correct order
+
+By default, the automatic generator will look for all markdown files (so those ending with `.md`) in the top-level of the repository except for the `README.md` file, order them alphabetically and create the different output formats with them. If you want to upload multiple content files, you will either have to:
+
+* adapt the names of the files so that they will be ordered correctly alphabetically, for example:
+
+  * `01_Introduction.md`
+  * `02_Some-Chapter.md`
+  * ...
+* or you will have to list every file in the correct order in `config.yml`. You can learn more about that in the [Configuration options](#configuration-options) section.
+
+</section>
+
+### Update the metadata
+
+<section>
+
+> Metadata is the data describing your OER. This includes information like the title, author, license and much more. If you don't supply metadata with your repository, it is unclear what your OER is about, who it is from, if and how your OER can be used and so on. This is why we have a `metadata.yml` file in our repository. This file lets us include the information about the OER directly in the repository. This is also necessary for inserting your OER into a search index like [OERSI](https://oersi.org). This section shows how to replace the dummy metadata in the repository with the correct metadata describing your OER.
+
+Perhaps the easiest way to generate your own metadata for your repository in the correct format is to use the [OERSI metadata generator](https://oersi.gitlab.io/metadata-form/metadata-generator.html) and fill out at least all required fields, but try to fill out as much as you can.
 
 ![Metadata generator](img/metadata-form.png "Metadata Generator")
 
-In your GitHub repository, paste the output of the generator into `metadata.yml`. To do this, you can copy the output to your clipboard and replace the whole file content with it by deleting the current content and then pasting from your clipboard.
+Now at the bottom of the page, you can click on `Generate`. This generates the metadata in the correct format. You can then copy the output to your clipboard either by using the `Copy` button, or by selecting the whole text (`Ctrl + A`) and copying it (`Ctrl + C`).
 
 ![Copy output to clipboard](img/metadata-copy-to-clipboard.png)
 
-### Video: Update the metadata
+In your GitHub repository, edit the `metadata.yml` file. Now delete the whole file content and paste the output of the generator.
+To save, click on `Commit changes...` in the top right corner. Confirm by clicking on `Commit changes`.
+
+#### Video: Update the metadata
 !?[Update the metadata](videos/metadata-placeholder.mp4)
 
-## Configuration of the document generation
+</section>
+
+### Configuration options
+
+<section>
+
+> In the repository, there is a file called `config.yml`. This gives you some configuration options concerning the automatic generation of your OER, like the order of your content.
+
 In the top level of the repository, there is a file named `config.yml`. It includes configuration for these four things:
 
 * `output`: state the output formats that you want to be automatically generated
 * `generate_landingpage`: decide whether or not to create a landing page
-* `content_files`: ordering of the chapters/course files
+* `content_files`: define the order of your content files
 * `generate_reuse_note`: decide whether or not to generate a reuse note on the generated documents
 
-### Video: Configuration
+#### Editing this file
+
+As you are editing this file, you have to consider the format of this file. This file is a `yaml` file. This file has a specific structure you have to follow, or else the automatic generator will not work.
+
+As you can see when opening the file, the structure looks like this:
+
+``` yaml
+output:
+  - format: asciidoc
+  - format: epub
+  - format: html
+  - format: pdf
+generate_landingpage: true
+# content_files:  # uncomment this to set the order of the documents (default alphabetical)
+#   - chapter01.md
+#   - chapter02.md
+#   - chapter03.md
+#   - chapter04.md
+generate_reuse_note: true
+```
+
+So we have to consider the identation and the correct symbols to use. If we want to use the `content_files` option, we uncomment this by deleting the `#` before each line and removing the residual spaces:
+
+``` yaml
+output:
+  - format: asciidoc
+  - format: epub
+  - format: html
+  - format: pdf
+generate_landingpage: true
+content_files:  # uncomment this to set the order of the documents (default alphabetical)
+  - chapter01.md
+  - chapter02.md
+  - chapter03.md
+  - chapter04.md
+generate_reuse_note: true
+```
+
+The dashes (`-`) have to start with two spaces before the dash and then one space after the dash.
+Basically, just make sure the number of spaces is consistent throughout the whole file.
+
+#### Video tutorial
 !?[Config file explained](videos/config.mp4)
 
-## Insert your course/document in OERSI
+</section>
+
+### Insert your OER in OERSI
 > Let's assume that...
 >
 > * you have put your whole completed course or document content into the repository, and it's either ordered alphabetically or you have defined the correct order in the `config.yml` file,
 > * you have enabled the `Pages` for `GitHub Actions` and there are no errors during Action execution, thus you have a published Page that represents the current version of your repository,
 > * you have entered full and correct metadata, ensuring the license is correct and you are not violating another work's license with this license,
 > * inside your `metadata.yml` file, you have set your creative work status to `Published`,
-
-then you are ready to put your course/document into OERSI!
+>
+> **then you are ready to put your OER into OERSI!**
 
 For that, head to OERSI's [record updater](https://oersi.org/resources/pages/de/record_update/) and paste the URL to your GitHub Page.
 
 ![Record updater](img/record-updater.png)
 
-## Done!
+### Done!
 Congratulations, you did it! Now go search you course on [oersi.org](https://oersi.org)!
+
+If you want to learn more about what you can do with this template, you can continue with the advanced tutorial.
